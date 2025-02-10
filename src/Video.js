@@ -6,7 +6,7 @@ function YoutubeVideo() {
   return (
     <VideoWrapper>
       <ReactPlayer
-        url="https://www.youtube.com/embed/5FfGhMskI_w&t=485s"
+        url="https://www.youtube.com/embed/wcM8L2sWkdg&t=37s"
         width="100%"
         height="100%"
         controls

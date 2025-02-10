@@ -1,7 +1,17 @@
 import styled from "styled-components";
 import YoutubeVideo from "./Video.js";
 import YoutubeVideo2 from "./Video2.js";
-function App() {
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
+import Signup from "./SignUp.js";
+
+function Home() {
+  const navigate = useNavigate(); // React Router의 useNavigate 사용
+
   return (
     <MainBody>
       <MainHeader>
@@ -9,9 +19,24 @@ function App() {
 
         <YoutubeVideo />
         <YoutubeVideo2 />
-        <LoginSign>로그인 회원가입</LoginSign>
+        <LoginSign>
+          <Login>로그인</Login>
+          <Sign onClick={() => navigate("/signup")}>회원가입</Sign>{" "}
+          {/* 회원가입 클릭 시 이동 */}
+        </LoginSign>
       </MainHeader>
     </MainBody>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+    </Router>
   );
 }
 
@@ -35,9 +60,18 @@ const MainBody = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-const LoginSign = styled.div`
+const Login = styled.div`
   color: rgb(193, 193, 233);
   padding-bottom: 20px;
+`;
+const Sign = styled.div`
+  color: rgb(193, 193, 233);
+  padding-bottom: 20px;
+`;
+const LoginSign = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 `;
 const MainText = styled.div`
   font-size: 50px;
