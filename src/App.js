@@ -20,8 +20,8 @@ function Home() {
         <YoutubeVideo />
         <YoutubeVideo2 />
         <LoginSign>
-          <Login>로그인</Login>
-          <Sign onClick={() => navigate("/signup")}>회원가입</Sign>{" "}
+          <Login onClick={() => navigate("/signup")}>로그인</Login>
+
           {/* 회원가입 클릭 시 이동 */}
         </LoginSign>
       </MainHeader>
