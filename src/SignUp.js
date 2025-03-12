@@ -32,7 +32,7 @@ function Signup() {
         {" "}
         <button>네이버 로그인</button>
       </NaverLogin>
-      <Identification>회원가입</Identification>
+      <Identification onClick={"/localsignupage"}>회원가입</Identification>
     </MainFrame>
   );
 }

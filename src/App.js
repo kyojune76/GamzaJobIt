@@ -1,12 +1,7 @@
 import styled from "styled-components";
 import YoutubeVideo from "./Video.js";
 import YoutubeVideo2 from "./Video2.js";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Signup from "./SignUp.js";
 
 function Home() {
@@ -28,19 +23,7 @@ function Home() {
     </MainBody>
   );
 }
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+export default Home;
 const MainHeader = styled.div`
   width: 50%;
   height: 90vh;
