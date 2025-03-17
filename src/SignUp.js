@@ -32,7 +32,9 @@ function Signup() {
         {" "}
         <button>네이버 로그인</button>
       </NaverLogin>
-      <Identification onClick={() => navigate("/lsp")}>회원가입</Identification>
+      <Identification onClick={() => navigate("/lsp")}>
+        JobIt 회원가입
+      </Identification>
     </MainFrame>
   );
 }
